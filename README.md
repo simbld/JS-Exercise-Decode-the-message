@@ -19,26 +19,20 @@ Création du module contenant le message codé.
 
 Commit : "Add the module containing the encoded message"
 
-Étape 1.2: 
-----------
+                    ~~~~~~~~~~
 
-Création du composant `DecodedMessage`
-Intégration du module `CodeMessage`
-
-Description : 
-Utilisation de la variable `CodedMessage` importée du module `CodedMessage` dans la logique du composant `DecodedMessage`
-
-Commit Message : "Add the DecodedMessage component for handling the coded message"
 
 Étape 2: 
 --------
 
+Création du composant `DecodedMessage`
+Intégration du module `CodeMessage`
 Création de l'État pour le Message Décodé
 
 Description : 
 Mise en place de l'état React decodedMessage en utilisant le hook useState pour stocker le message décodé.
 
-Commit Message : "Add state to store the decoded message"
+Commit Message : "Add the state to store the decoded message"
 
                     ~~~~~~~~~~
 
