@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 
 function DecodedMessage() {
@@ -6,7 +6,9 @@ function DecodedMessage() {
   const decoder = hiddenMessage
     .filter((char) => char !== "X" && char !== ",")
     .join("");
-
+  useEffect(() => {
+    setIsDecodedMessage(decoder);
+  }, []);
   console.log(decoder);
   return (
     <>
