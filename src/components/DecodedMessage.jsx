@@ -9,13 +9,28 @@ function DecodedMessage() {
   useEffect(() => {
     setIsDecodedMessage(decoder);
   }, []);
-  console.log(decoder);
   return (
     <>
-      <div>
-        <h1>Decode Messages 1 :</h1>
-
-        <div>Message is : {isDecodedMessage}</div>
+      <div className="container">
+        <div className="safe">
+          <div className="button-container">
+            <button className="button">press to decode</button>
+          </div>
+          <div className="safe-door">
+            <div className="codedmessage">
+              "X", "X", "X", "X", "W", "X", "E", "X", "X", "X", "X", "X", "L",
+              "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
+              "X", "X", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X",
+              "X", "X", "X", "X", " ", "X", "X", "X", "X", "X", "X", "X", "X",
+              "D", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
+              "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
+              "X", "X", "X", "X", "X", "X", "X", "X", "O", "X", "X", "X", "X",
+              "X", "X", "N", "X", "X", "X", "X", "E", "X", "X", "X", "X", "X",
+              "X", "X", "X", "X", "X", ",", "X", " ", "X"
+            </div>
+            <div className="safe-content">{isDecodedMessage}</div>
+          </div>
+        </div>
       </div>
     </>
   );
