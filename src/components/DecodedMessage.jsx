@@ -21,17 +21,7 @@ function DecodedMessage() {
             </button>
           </div>
           <div className="safe-door">
-            <div className="codedmessage">
-              "X", "X", "X", "X", "W", "X", "E", "X", "X", "X", "X", "X", "L",
-              "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
-              "X", "X", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X",
-              "X", "X", "X", "X", " ", "X", "X", "X", "X", "X", "X", "X", "X",
-              "D", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
-              "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
-              "X", "X", "X", "X", "X", "X", "X", "X", "O", "X", "X", "X", "X",
-              "X", "X", "N", "X", "X", "X", "X", "E", "X", "X", "X", "X", "X",
-              "X", "X", "X", "X", "X", ",", "X", " ", "X"
-            </div>
+            <div className="codedmessage">"{hiddenMessage.join(`", "`)}"</div>
             <div className="safe-content">{isDecodedMessage}</div>
           </div>
         </div>
