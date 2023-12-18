@@ -1,20 +1,24 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 
 function DecodedMessage() {
   const [isDecodedMessage, setIsDecodedMessage] = useState("");
-  const decoder = hiddenMessage
-    .filter((char) => char !== "X" && char !== ",")
-    .join("");
-  useEffect(() => {
+
+  const decodeButton = () => {
+    const decoder = hiddenMessage
+      .filter((char) => char !== "X" && char !== ",")
+      .join("");
     setIsDecodedMessage(decoder);
-  }, []);
+  };
+
   return (
     <>
       <div className="container">
         <div className="safe">
           <div className="button-container">
-            <button className="button">press to decode</button>
+            <button className="button" onClick={decodeButton}>
+              press to decode
+            </button>
           </div>
           <div className="safe-door">
             <div className="codedmessage">

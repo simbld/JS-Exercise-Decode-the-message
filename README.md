@@ -66,19 +66,6 @@ Commit Message : "Calling the decoding function when mounting the component"
 Étape 5: 
 --------
 
-Mise en Place du Rendu JSX
-
-Description : 
-Mise en place de la structure JSX de l'application, y compris les éléments pour afficher le message d'origine et le message décodé.
-
-Commit Message : "Configuring JSX rendering to display messages"
-
-                    ~~~~~~~~~~
-
-
-Étape 6: 
---------
-
 Stylisation et Peaufinage
 
 
@@ -89,3 +76,16 @@ Commit Message : "
 Add styles to improve the user interface"
 
 (AVant cette étape, réaliser les memes étapes pour `decodeCode`, puis réaliser l'étape 6)
+
+                    ~~~~~~~~~~
+
+
+Étape 6: 
+--------
+
+Mise en Place du Rendu JSX
+
+Description : 
+Mise en place de la structure JSX de l'application, y compris les éléments pour afficher le message d'origine et le message décodé.
+
+Commit Message : "Configuring JSX rendering to display messages"
