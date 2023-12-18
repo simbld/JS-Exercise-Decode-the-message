@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 
 function DecodedMessage() {
   const [isDecodedMessage, setIsDecodedMessage] = useState("");
-
-  const toggleDecodeButton = () => {
-    if (isDecodedMessage === "") {
-      const decoder = hiddenMessage
-        .filter((char) => char !== "X" && char !== ",")
-        .join("");
-      setIsDecodedMessage(decoder);
-    } else {
-      setIsDecodedMessage("");
+  useEffect(() => {
+    let timer;
+    if (isDecodedMessage !== "") {
+      timer = setTimeout(() => {
+        setIsDecodedMessage("");
+      }, 3000);
     }
+    return () => clearTimeout(timer);
+  }, [isDecodedMessage]);
+  const decodeButton = () => {
+    const decoder = hiddenMessage
+      .filter((char) => char !== "X" && char !== ",")
+      .join("");
+    setIsDecodedMessage(decoder);
   };
 
   return (
@@ -20,7 +24,7 @@ function DecodedMessage() {
       <div className="container">
         <div className="safe">
           <div className="button-container">
-            <button className="button" onClick={toggleDecodeButton}>
+            <button className="button" onClick={decodeButton}>
               press to decode
             </button>
           </div>
