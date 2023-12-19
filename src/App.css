@@ -16,12 +16,21 @@
 .codedmessage {
   margin: 10px;
   padding: 12px;
+  max-height: 400px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+  overflow: auto;
   display: flex;
   justify-content: center;
   text-align: justify;
+  align-items: center;
   line-height: 1;
   font-family: 'MorePerfectDOSVGA', sans-serif;
   background-color: #0d18db;
+  color: white;
+  word-wrap: break-word;
+  white-space: normal;
   border: 3px solid #4b4949;
   box-shadow: 0 0 5px #d2e2e2;
   border-radius: 5%;
