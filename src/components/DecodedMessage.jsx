@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 import useTimer from "../hooks/useTimer";
+import useFilter from "../hooks/useFilter";
 
 function DecodedMessage() {
   const [isDecodedMessage, setIsDecodedMessage] = useState("");
   useTimer(isDecodedMessage, setIsDecodedMessage, 1000);
+  const filteredMessage = useFilter(hiddenMessage, ["X", ","]);
   const decodeButton = () => {
-    const decoder = hiddenMessage
-      .filter((char) => char !== "X" && char !== ",")
-      .join("");
-    setIsDecodedMessage(decoder);
+    setIsDecodedMessage(filteredMessage);
   };
 
   return (
