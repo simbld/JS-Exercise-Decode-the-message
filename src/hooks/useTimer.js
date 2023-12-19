@@ -1,3 +1,9 @@
+/**
+ * @param {any} message
+ * @param {Function} setMessage
+ * @param {number} delay - the time interval before the message disappears
+ */
+
 import { useEffect } from "react";
 
 const useTimer = (message, setMessage, delay) => {
