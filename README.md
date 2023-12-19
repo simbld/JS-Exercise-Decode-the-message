@@ -75,17 +75,18 @@ Ajout et ajustement des styles CSS pour améliorer l'apparence de l'application.
 Commit Message : "
 Add styles to improve the user interface"
 
-(AVant cette étape, réaliser les memes étapes pour `decodeCode`, puis réaliser l'étape 6)
 
                     ~~~~~~~~~~
 
 
-Étape 6: 
+Étape 7: 
 --------
 
-Mise en Place du Rendu JSX
+Séparer la Logique des Composants
 
 Description : 
-Mise en place de la structure JSX de l'application, y compris les éléments pour afficher le message d'origine et le message décodé.
+Séparer la Logique des Composants pour une meilleur lisibilité du code.
+Séparation des Préoccupations : Garder ta logique métier séparée de la logique d'interface utilisateur.
+Création de hooks personnalisés et passer des props aux composants MessageButton, CodeButton, DisplayMessage, TimerLogic, FilterLogic
 
-Commit Message : "Configuring JSX rendering to display messages"
+Commit Message : "function-refactoring"

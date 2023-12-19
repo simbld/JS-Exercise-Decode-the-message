@@ -13,24 +13,56 @@
   font-style: normal;
 }
 
+.codedmessage {
+  margin: 10px;
+  padding: 12px;
+  max-height: 400px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  line-height: 1;
+  font-family: 'MorePerfectDOSVGA', sans-serif;
+  background-color: #0d18db;
+  color: white;
+  word-wrap: break-word;
+  white-space: normal;
+  border: 3px solid #4b4949;
+  box-shadow: 0 0 5px #d2e2e2;
+  border-radius: 5%;
+}
+
 .safe {
-  width: 350px;
-  height: 600px;
-  margin: 20px auto;
-  padding: 10px;
+  width: 400px;
+  height: 615px;
   background-color: #333;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px #00000080;
+  box-shadow: inset 0 0 10px #d2e2e2;
 }
 
 .safe-door {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 415px;
   background-color: #59767e;
   border: 1px solid #666;
   border-radius: 10px;
   text-align: center;
-  margin: 30px 30px;
+  margin: 23px;
   padding-bottom: 20px;
   box-shadow: inset 0 0 10px #d2e2e2;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
 }
 
 .safe-content {
@@ -41,24 +73,7 @@
   font-size: 30px;
   background-color: #222;
   display: inline-block;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 3px;
   border-radius: 5px;
-}
-
-.codedmessage {
-  margin: 10px;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-  line-height: 1;
-  font-family: 'MorePerfectDOSVGA', sans-serif;
-  background-color: #0d18db;
-  border: 3px solid #4b4949;
-  box-shadow: 0 0 5px #d2e2e2;
-  border-radius: 5%;
 }
 
 .container {
@@ -69,19 +84,26 @@
   align-items: center;
 }
 
+.decode-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .button-container {
   margin-top: 10px;
   margin-bottom: -15px;
   display: flex;
   justify-content: center;
+  gap: 20px;
   padding: 10px 10px;
 }
   
 .button {
   width: 190px;
-  background-image: radial-gradient(circle, rgb(223, 226, 226), #59767e);
-  border: 10px rgb(19, 18, 18);
-  color: rgb(39, 38, 38);
+  background-image: radial-gradient(circle, #dfe2e2, #59767e);
+  border: 10px #131212;
+  color: #272626;
   padding: 10px 8px;
   border-radius: 5px;
   cursor: pointer;
@@ -95,18 +117,24 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
   white-space: nowrap;
-  text-shadow: 0 0 10px rgba(102, 112, 100, 0.5);
+	text-shadow: 0px 0px 5px #3a3939;
   box-shadow: 0 10px #59767e;
 
 }
 
 .button:hover {
 	box-shadow: 0 10px #59767e;
-	text-shadow: 1px 1px 8px rgb(58, 57, 57);
+	text-shadow: 1px 1px 2px #3a3939;
+  color: #352f2f;
 }
 
 .button:active {
 	box-shadow: 0 2px #59767e;
 	transform: translateY(8px);
-	transition: box-shadow 0.1s ease;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-choice {
+  width: 100px;
+  margin-bottom: 10px;
 }
