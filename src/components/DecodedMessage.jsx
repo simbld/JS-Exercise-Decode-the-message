@@ -2,11 +2,16 @@ import { useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 import useTimer from "../hooks/useTimer";
 import useFilter from "../hooks/useFilter";
+import useDisplay from "../hooks/useDisplay";
+import { hiddenCode } from "../modules/CodedCode";
 
 function DecodedMessage() {
+  const [currentMessage, switchMessage] = useDisplay(hiddenMessage);
+  const filteredMessage = useFilter(currentMessage, ["X", ","]);
   const [isDecodedMessage, setIsDecodedMessage] = useState("");
+
   useTimer(isDecodedMessage, setIsDecodedMessage, 1000);
-  const filteredMessage = useFilter(hiddenMessage, ["X", ","]);
+
   const decodeButton = () => {
     setIsDecodedMessage(filteredMessage);
   };
@@ -16,11 +21,21 @@ function DecodedMessage() {
       <div className="container">
         <div className="safe">
           <div className="button-container">
-            <button className="button button-choice">Message 1</button>
-            {/* <button className="button button-choice">Message 2</button> */}
+            <button
+              className="button button-choiceMessage"
+              onClick={() => switchMessage(hiddenMessage)}
+            >
+              Message
+            </button>
+            <button
+              className="button button-choiceMessage"
+              onClick={() => switchMessage(hiddenCode)}
+            >
+              Code
+            </button>
           </div>
           <div className="safe-door">
-            <div className="codedmessage">"{hiddenMessage.join(`", "`)}"</div>
+            <div className="codedmessage">"{currentMessage.join(`", "`)}"</div>
             <div className="content-container">
               <div className="safe-content">{isDecodedMessage}</div>
             </div>

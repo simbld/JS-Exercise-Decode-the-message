@@ -86,7 +86,21 @@ Séparer la Logique des Composants
 
 Description : 
 Séparer la Logique des Composants pour une meilleur lisibilité du code.
-Séparation des Préoccupations : Garder ta logique métier séparée de la logique d'interface utilisateur.
-Création de hooks personnalisés et passer des props aux composants MessageButton, CodeButton, DisplayMessage, TimerLogic, FilterLogic
+Séparation des Préoccupations : Garder la logique métier séparée de la logique d'interface utilisateur.
+Création de hooks personnalisés et passer des props aux composants  useTimer, useFilter
 
-Commit Message : "function-refactoring"
+Commit Message : "Refactoring with custom hooks".
+
+
+                    ~~~~~~~~~~
+
+
+Étape 8: 
+--------
+
+DRY (choisir le message a affiché sans changer de page)
+
+Description:
+Créer le deuxième message codé et y acceder depuis le deuxième bouton puis créer le custom hook useDisplay pour afficher l'un ou l'autre des messages codés
+
+Commit Message : Add logic for the second coded message
