@@ -38,7 +38,7 @@
 
 .safe {
   width: 400px;
-  height: 615px;
+  height: 600px;
   background-color: #333;
   border-radius: 10px;
   box-shadow: 0 0 10px #00000080;
@@ -66,7 +66,7 @@
 }
 
 .safe-content {
-  width: 180px;
+  width: 330px;
   height: 45px;
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
@@ -95,8 +95,8 @@
   margin-bottom: -15px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 10px;
+  gap: 80px;
+  padding: 10px 50px;
 }
   
 .button {
