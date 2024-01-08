@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { hiddenMessage } from "../modules/CodedMessage";
 import useTimer from "../hooks/useTimer";
@@ -35,7 +36,7 @@ function DecodedMessage() {
             </button>
           </div>
           <div className="safe-door">
-            <div className="codedmessage">{currentMessage.join(`", "`)}</div>
+            <div className="codedmessage">"{currentMessage.join(`", "`)}"</div>
             <div className="content-container">
               <div className="safe-content">{isDecodedMessage}</div>
             </div>

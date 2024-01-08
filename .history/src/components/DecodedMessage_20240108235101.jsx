@@ -35,7 +35,9 @@ function DecodedMessage() {
             </button>
           </div>
           <div className="safe-door">
-            <div className="codedmessage">{currentMessage.join(`", "`)}</div>
+            <div className="codedmessage">
+              &quot;{currentMessage.join(`&quot;, &quot;`)}&quot;
+            </div>
             <div className="content-container">
               <div className="safe-content">{isDecodedMessage}</div>
             </div>
